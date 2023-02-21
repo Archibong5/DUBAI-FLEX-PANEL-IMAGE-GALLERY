@@ -1,0 +1,95 @@
+html{
+  background: #16FF00;
+  box-sizing: border-box;
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+}
+
+*, *::before, *::after{
+  box-sizing: inherit;
+}
+
+body{
+  margin: 0;
+}
+
+.panels{
+  min-height: 100vh;
+  display: flex;
+}
+
+.panel{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow:hidden;
+
+  transition:
+             font-size 1s ease-in-out,
+             flex 1s ease-in-out,
+             background 2s ease-in-out;
+
+}
+
+.panel p{
+  width: 100%;
+  font-size: 2em;
+  text-transform: uppercase;
+}
+
+.panel > *{
+  transition: transform 5s;
+  flex: 1 0 auto;
+}
+
+.panel.open{
+  flex: 5;
+  font-size: 30px;
+}
+
+.panel > *:first-child{
+  transform: translateY(-150%);
+}
+
+
+.panel.open-active > *:first-child{
+  transform: translateY(0);
+}
+
+.panel > *:last-child{
+  transform: translateY(150%);
+}
+
+
+.panel.open-active > *:last-child{
+  transform: translateY(0);
+}
+
+
+
+
+
+
+.panel1{
+background: url(https://www.dubaitravelplanner.com/wp-content/uploads/2019/10/Dubai-Travel-Planner-CanvaPro-106.jpg)
+}
+
+.panel2{
+background: url(https://www.everysteph.com/wp-content/uploads/2021/10/Dubai-Nightlife-Things-to-do-in-Dubai-at-Night-1.jpg);
+}
+
+.panel3{
+background: url(https://www.dubaitravelplanner.com/wp-content/uploads/2019/10/Dubai-Travel-Planner-CanvaPro-106.jpg);
+}
+
+.panel4{
+background: url(https://i0.wp.com/fottam.com/wp-content/uploads/2016/10/Dubai-Marina-Towers-Night-Skyline-View.jpg?fit=1160%2C652&ssl=1);
+}
+
+.panel5{
+background: url(https://tourscanner.com/blog/wp-content/uploads/2022/05/things-to-do-in-Dubai-at-night.jpg)
+}
